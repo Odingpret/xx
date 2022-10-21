@@ -29,56 +29,15 @@ if (strpos(json_encode($login), '"status":true')) {
     echo @color('yellow', "BONSTRI\t\t: ");
     echo @color('nevy', "$poin Poin\n");
     cek:
-    echo @color('green', "PILIH PAKET:\n");
-    echo @color('nevy', "[1] 1GB + 4GB MALAM ==> Rp 1\n[2] 10GB 30 Hari ==> Rp 15000\n[3] 15GB 30 Hari ==> Rp 20000\n[4] 25GB 25rb (Diskon) ==> Rp 25000\n[5] 25GB 24 Jam 20 Hari ==> Rp 25000\n[6] 25GB 20 Hari ==> Rp 25000\n[7] 25GB 20 Hari ==> Rp 25000\n[8] 25GB 24 Jam 30 Hari ==> Rp 29000\n[9] 25GB 30 Hari ==> Rp 29000\n[10] 55GB 30 Hari ==> Rp 50000\n[11] 65GB 30 Hari ==> Rp 60000\n[12] 75GB 30 Hari ==> Rp 75000\n[13] 90GB 30 Hari ==> Rp 90000\n[14] 100GB 30 Hari ==> Rp 90000\n");
-    echo @color('green', "PILIH : ");
-    $pilih = trim(fgets(STDIN));
-    switch ($pilih) {
-            case '1':
-            $prodid = '25669';
+
+    echo @color('purple', "MASUKAN ID PAKET XL\t\t: ");
+    $idpp = trim(fgets(STDIN));
+            $prodid = '$idpp';
             break;
-            case '2':
-            $prodid = '25245';
-            break;
-            case '3':
-            $prodid = '25459';
-            break;
-            case '4':
-            $prodid = '22648';
-            break;
-            case '5':
-            $prodid = '23160';
-            break;
-            case '6':
-            $prodid = '25254';
-            break;
-            case '7':
-            $prodid = '25264';
-            break;
-            case '8':
-            $prodid = '23164';
-            break;
-            case '9':
-            $prodid = '25267';
-            break;
-            case '10':
-            $prodid = '25469';
-            break;
-            case '11':
-            $prodid = '25690';
-            break;
-            case '12':
-            $prodid = '25247';
-            break;
-            case '13':
-            $prodid = '25476';
-            break;
-            case '14':
-            $prodid = '25693';
-            break;
+            
         
         default:
-            echo @color('red', "PILIH PAKET TERLEBIH DAHULU\n");
+            echo @color('red', "PILIH ID PAKET TERLEBIH DAHULU\n");
             goto cek;
             break;
     }
